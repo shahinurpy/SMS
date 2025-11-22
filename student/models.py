@@ -3,9 +3,9 @@ from authentications.models import UserProfile
 from adminstration.models import Course
 # Create your models here.
 
-class Teacher(models.Model):
-    user = models.OneToOneField(UserProfile,on_delete=models.CASCADE,blank=True,null=True,related_name='teacher')
-    designation = models.CharField(max_length=200, blank=True, null=True )
+class Student(models.Model):
+    user = models.OneToOneField(UserProfile,on_delete=models.CASCADE,blank=True,null=True,related_name='student')
+    roll_no = models.CharField(max_length=8)
     course = models.ForeignKey(Course, on_delete=models.RESTRICT, blank=True, null=True)
     
     def __str__(self):

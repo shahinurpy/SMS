@@ -1,10 +1,13 @@
 from django.urls import path
-from .views import register , login  , ProfileRetUpDesGenric
+from .views import views
+
 
 urlpatterns = [
-    path("registration/", register , name="registration"),
+    path('registration/', register_user , name='registration'),
     path("login/", login, name="signin"),
-    # path("profile/", ProfileGenric.as_view(), name="profile"),
-    path("profile/", ProfileRetUpDesGenric.as_view(), name="profile-update-delete"),
-    # path("logout/", user_logout, name="logout"),
+    path('otp/create/', views.create_otp),
+    path('otp/verify/', views.verify_otp),
+    path('password-reset/request/', views.request_password_reset),
+    path('password-reset/confirm/', views.reset_password),
+    path('password-change/', views.change_password),
 ]
