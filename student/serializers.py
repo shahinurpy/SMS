@@ -8,7 +8,7 @@ class StudentSerializer(serializers.ModelSerializer):
     last_name = serializers.CharField()
     phone_number = serializers.CharField()
     email = serializers.EmailField()
-    profile_picture = serializers.ImageFielde()
+    profile_picture = serializers.ImageField()
     class Meta : 
         model = Student
         fields = ["first_name", "last_name", "phone_number", "email", "password", "profile_picture", "roll_no", "course"]

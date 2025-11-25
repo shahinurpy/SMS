@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'authentications',
     'adminstration',
     'student',
-    'teacher'
+    'teacher',
+    'channels',
+    'chat'
 ]
 
 MIDDLEWARE = [
@@ -71,7 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'sms.wsgi.application'
-
+ASGI_APPLICATION = 'sms.asgi.application'
 AUTH_USER_MODEL = "authentications.CustomUser"
 
 # Database
